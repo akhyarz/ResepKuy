@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Lato', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #e8e7ff; */
+    background-image: url(ella.jpg);
+    background-size: cover;
+}
+/* #e8e7ff */
+.formcontainer {
+    max-width: 80%;
+    height: 80%;
+    display: flex;
+    padding: 20px;
+}
+.loginpage {
+    background-color: rgba(255, 255, 255,.97);
+    width: 50%;
+    padding: 40px;
+}
+.loginpage h1 {
+    font-weight: 400;
+}
+.form {
+    height: 150px;
+}
+.form p:nth-child(1) {
+    font-size: 25px;
+}
+.form p:nth-child(2) {
+    margin: 5px 0;
+    color: rgba(0, 0, 0, .5);
+}
+.form p {
+    margin: 5px 0;
+}
+.form label {
+    font-size: 17px;
+}
+span {
+    color: #5349ed;
+}
+.forminput input[type=email],
+.forminput input[type=password] {
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 10px 0;
+}
+.forminput input:focus {
+    outline-style: none;
+}
+
+.forminput input[type=checkbox] {
+    margin: 10px 0;
+    margin-right: 7px;
+}
+.forminput label {
+    font-size: 15px;
+    color: rgba(0, 0, 0, .7);
+}
+.forminput button {
+    width: 100%;
+    height: 35px;
+    margin: 10px 0 5px 0;
+    border: none;
+    color: #fff;
+    background-color: #5349ed;
+    border-radius: 7px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 4px 5px 6px rgba(0, 0, 0, 0.3);
+    transform: translate(0,0);
+    transition-duration: .1s;
+}
+
+.forminput button:active {
+    transform: translate(3px,3px);
+    box-shadow: 4px 5px 6px rgba(0, 0, 0, 0);
+    background-color: #0a0092;
+    
+}
+.forminput {
+    margin: 15px 0;
+    height: 227px;
+}
+.regis p ,
+.regis a {
+    margin: 5px 0;
+    font-size: 17px !important;
+}
+.regis p {
+    margin: 5px 0;
+}
+.infopage {
+    background: rgb(83,73,237);
+    background: linear-gradient(180deg, 
+        rgba(83,73,237,1) 0%, 
+        rgba(255,79,79,0.5172443977591037) 
+        100%);
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.infodetail {
+    width: 80%;
+}
+.infodetail h1{
+    font-size: 45px;
+    font-weight: 700;
+}
+.infodetail p {
+    font-weight: 400;
+    font-size: 19px;
+    color: rgba(0, 0, 0, .7);
+}
+
