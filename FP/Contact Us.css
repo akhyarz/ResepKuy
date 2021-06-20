@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    background-image: url(ella.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: static;
+    display: block;
+    overflow: visible;
+    height: auto;
+    min-height: 850px;
+}
+.h1-contact{
+    padding-top: 50px;
+    margin-bottom: 70px;
+    color: rgb(83,73,237);
+    color: #5349ed;
+}
+.h3-contact{
+    color: #5349ed;
+}
+.info p{
+    color: black;
+}
+.name{
+    background-color: whitesmoke;
+    border: 1px solid grey;
+    color: whitesmoke;
+    width: 45%;
+    height: 70px;
+    padding: 6px;
+    font-size: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    margin-right: 11px;
+}
+.email{
+    background-color: whitesmoke;
+    border: 1px solid grey;
+    color: whitesmoke;
+    width: 45%;
+    height: 70px;
+    padding: 6px;
+    font-size: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    margin-left: 11px;
+}
+.subject{
+    background-color: whitesmoke;
+    border: 1px solid grey;
+    color: whitesmoke;
+    width: 93.5%;
+    height: 70px;
+    padding: 6px;
+    font-size: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+.comment{
+    background-color: whitesmoke;
+    border: 1px solid grey;
+    color: whitesmoke;
+    width: 93.5%;
+    padding: 12px;
+    font-size: 15px;
+    min-height: 150px;
+    max-height: 300px;
+    resize: vertical;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+.button-send{
+    background-color: whitesmoke;
+    width: 93.5%;
+    height: 46px;
+    margin: auto;
+    cursor: pointer;
+    border-radius: 8px;
+    color: black;
+    font-weight: bold;
+}
+.name:hover{
+    border-color:whitesmoke;
+}
+.email:hover{
+    border-color:whitesmoke;
+}
+.subject:hover{
+    border-color:whitesmoke;
+}
+.comment:hover{
+    border-color:whitesmoke;
+}
+input.button-send:hover, input.button-send:active{
+    background: rgb(83,73,237);
+    color: whitesmoke;
+}
+.sosmed{
+    background: rgb(83,73,237);
+background: linear-gradient(0deg, rgba(83,73,237,0.7483368347338936) 0%, rgba(167,76,160,0.7455357142857143) 50%, rgba(255,79,79,0.7483368347338936) 100%);
+    padding-top: 30px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 100;
+    cursor: pointer;
+}
+.h6-contact:hover{
+    color: #5349ed;
+}
+
+.contact{
+    margin-bottom: 222px;
+}
+.h6-contact{
+    padding-bottom: 20px;
+}
+.h2-contact{
+    padding-right: 250px;
+    padding-left: 100px;
+    padding-top: 50px;
+    font-family: 'Dancing Script', cursive;
+    color: #5349ed;
+}
+.sosmed i{
+    font-size: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
