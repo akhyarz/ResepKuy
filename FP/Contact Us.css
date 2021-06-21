@@ -137,3 +137,15 @@ background: linear-gradient(0deg, rgba(83,73,237,0.7483368347338936) 0%, rgba(16
     padding-left: 10px;
     padding-right: 10px;
 }
+
+.link {
+    padding-bottom: 20px;
+    text-decoration: none;
+    color:whitesmoke;
+}
+/* .link:visited {
+    color: black;
+} */
+.link:hover { 
+    color: #5349ed;
+}
