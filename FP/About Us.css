@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+
+body{
+    background: rgb(232,231,255);
+    margin: 0;
+    padding: 0;
+    color: black;
+    font-family: 'Lato', sans-serif;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: static;
+    display: block;
+    overflow: visible;
+    height: auto;
+    min-height: 850px;
+}
+.title span {
+    font-family: 'Dancing Script', cursive;
+    color: #5349ed;
+}
+.title{
+    padding-top: 20px;
+    padding-left: 30px;
+    font-size: 40px;
+}
+.about h2{
+    text-align: center;
+    padding-bottom: 20px;
+    font-weight: bolder;
+    color: #5349ed;
+}
+.info img{
+    width: 300px;
+    height: 300px;
+}
+.info{
+    background-color: black;
+    width: 600px;
+    height: 600px;
+    color: white;
+    text-align: center;
+}
+.info p{
+    padding-top: 20px;
+    padding-bottom: 50px;;
+}
+.info h4{
+    padding-bottom: 126px;
+    padding-left: 10px;
+    padding-right: 10px
+}
+#quote {
+    text-align: left;
+    padding-left: 50px;
+    padding-bottom: 98px;
+}
+.sosmed{
+    background: rgb(255,79,79);
+    background: linear-gradient(0deg, rgba(255,79,79,0.7511379551820728) 100%, rgba(255,79,79,1) 100%);
+    padding-top: 30px;
+    margin-top: 50px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 100;
+    cursor: pointer;
+}
+.h6-contact:hover{
+    color: #5349ed;
+}
+.h6-contact{
+    padding-bottom: 20px;
+}
+.h2-contact{
+    padding-right: 250px;
+    padding-left: 100px;
+    padding-top: 50px;
+    font-family: 'Dancing Script', cursive;
+    color: #5349ed;
+}
+.sosmed i{
+    font-size: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
