@@ -125,11 +125,10 @@ background: linear-gradient(0deg, rgba(83,73,237,0.7483368347338936) 0%, rgba(16
 .h6-contact{
     padding-bottom: 20px;
 }
-.h2-contact{
-    padding-right: 250px;
-    padding-left: 100px;
-    padding-top: 50px;
+.h2-contact span{
+    margin-left: -20%;
     font-family: 'Dancing Script', cursive;
+    font-size: 40px;
     color: #5349ed;
 }
 .sosmed i{
