@@ -42,6 +42,7 @@ body {
     display: flex;
     align-items: center;
     cursor: pointer;
+    margin-bottom: 20px;
 }
 .navbar ul li:hover {
     border-radius: 7px;
