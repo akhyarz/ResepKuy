@@ -50,7 +50,8 @@ span {
     color: #5349ed;
 }
 .forminput input[type=email],
-.forminput input[type=password] {
+.forminput input[type=password],
+.forminput input[type=text] {
     width: 100%;
     height: 40px;
     border: 1px solid rgba(0, 0, 0, .2);

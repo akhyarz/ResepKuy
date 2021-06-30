@@ -40,6 +40,12 @@ body {
     border-radius: 5px;
     padding: 5px 10px;
     margin: 13px 0;
+    
+}
+.active {
+    outline-style: solid;
+    outline-color: red;
+    outline-width: 1px;
 }
 .forminput input:focus {
     outline-style: none;
