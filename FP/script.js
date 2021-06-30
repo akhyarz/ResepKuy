@@ -4,6 +4,7 @@ const form = document.querySelectorAll('.form input');
 const checkbox = document.querySelector('input[type=checkbox]');
 //Index
 const search = document.querySelector('.search');
+const containerCard = document.querySelector('.cardcontainer');
 
 
 //login
@@ -68,15 +69,44 @@ async function login(){
 //login
 
 //Index
-getDataResep();
+
 async function getDataResep() {
     const data = await fetch('https://calm-refuge-58943.herokuapp.com/getdataResep');
     const newData = await data.json();
-    console.log(newData);
+    return newData;
+}
+showCard();
+async function showCard() {
+    const data = await getDataResep();
+    const {values} = data;
+    card = ``;
+    values.forEach(el => card += cardInfo(el));
+    containerCard.innerHTML = card;
+    console.log(values);
 }
 
 
-
-function cardInfo(params) {
-    
+function cardInfo(el) {
+    return ` <div class="card-food">
+    <div class="header-card">
+        <div class="img">
+            <img src=${el.thumb} alt="">
+        </div>
+        <div class="detail">
+            <p>${el.title}</p>
+            <p>Yogyakarta</p>
+        </div>
+    </div>
+    <div class="info-card">
+        <div class="inf">
+            <p>${el.description}</p>
+        </div>
+    </div>
+    <div class="btn-detail">
+        <button class="detail_btn"><a class="link" href="FoodInformation.html">Detail</a></button>
+        <div class="time">
+            <button><i class="ri-heart-add-line"></i></button>
+        </div>
+    </div>  
+</div> `;
 }

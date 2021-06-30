@@ -116,8 +116,8 @@ body {
 }
 .card-food {
     background-color: #fff;
-    width: 300px;
-    margin: 10px;
+    max-width: 315px;
+    margin: 5px;
     flex-wrap: wrap;
     padding: 15px 30px;
     border-radius: 20px;
@@ -138,6 +138,7 @@ body {
     color: rgba(0, 0, 0, .6);
 }
 .header-card img {
+    border-radius: 50%;
     width: 100px;
     height: 100px;
     object-fit: cover;
