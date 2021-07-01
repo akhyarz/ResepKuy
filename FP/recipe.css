@@ -86,4 +86,11 @@ body {
     font-size: 20px;
     margin-right: 10px;
 }
+.ingredient,
+.step {
+   font-weight: 300;
+}
 
+.none {
+    display: none;
+}

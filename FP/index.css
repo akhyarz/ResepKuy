@@ -170,7 +170,6 @@ button {
     cursor: pointer;
 }
 button i {
-    
     font-size: 20px;
 }
 .fas {
@@ -183,4 +182,30 @@ button i {
 .detail_btn a{
     text-decoration: none;
     color: rgb(255, 255, 255);
+}
+.notFound {
+    width: 100%;
+    display: inline;
+    text-align: center;
+    color: rgba(0, 0, 0, .5);
+}
+.time button {
+    display: flex;
+    align-items: center;
+}
+.time button span {
+    margin-left: 5px;
+    
+}
+.inf p {
+    font-weight: 300;
+    text-align: left;
+    line-height: .6cm;
+}
+.inf{
+    min-height: 150px;
+}
+.time {
+    display: flex;
+    align-items: center;
 }
