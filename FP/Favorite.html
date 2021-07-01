@@ -1,179 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta nam<!DOCTYPE html>
-        <html lang="en">
-
-            <head>
-                <meta charset="UTF-8">
-                <meta http-equiv="X-UA-Compatible" content="IE=edge">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <link rel="stylesheet" href="Favorite.css">
-                <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-                <title>Document</title>
-            </head>
-
-    <body>
-        <div class="navbar">
-            <div class="title">
-                <h1> <span>Resep</span>Kuy</h1>
-            </div>
-            <div class="menu">
-                <ul>
-                    <li>
-                        <i class="fas ri-home-5-line"></i>
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <i class="fas ri-restaurant-line"></i>
-                        <a href="recipe.html">Recipe</a>
-                    </li>
-                    <li>
-                        <i class="fas ri-bar-chart-grouped-line"></i>
-                        <a href="Trendfood.html">Trend&nbsp;Food</a>
-                    <li>
-                        <i class="fas ri-heart-2-line"></i>
-                        <a href="Favorite.html">Favorite</a></li>
-                    <li>
-                        <i class="fas ri-information-line"></i>
-                        <a href="info.html">Info</a></li>
-                    <li>
-                        <i class="fas ri-shield-user-line"></i>
-                        <a href="about.html">About Us</a></li>
-                </ul>
-            </div>
-            <div class="logout">
-                <i class="fas ri-login-circle-line"></i>
-                <a href="login.html">Login</a>
-            </div>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   
+    <link rel="stylesheet" href="Trendingfood.css">
+    <title>Favorite</title>
+</head>
+<body>
+    <div class="menu-btn">
+        <span class="ri-menu-line"></span>
+    </div>
+    <nav class="sidebar">
+        <div class="title"><span>Resep</span>Kuy</div>
+        <div class="menu">
+            <ul>
+                <li><a class="sub-menu" href="#">Home</a></li>
+                <li><a class="sub-menu" href="#">Trending Food</a></li>
+                <li><a class="sub-menu" href="#">Favourite</a></li>
+                <li><a class="sub-menu" href="#">Articles</a></li>
+                <li><a class="sub-menu" href="#">About</a></li>
+                <li><a class="sub-menu" href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="account">
+            <i class="ri-login-circle-line"></i>
+            <a href="#">LOGIN</a></div>
+    </nav>
+    <section class="mainbar">
+        <div class="search">
+            <input type="text" placeholder="Search..">
         </div>
 
-        <div class="mainbar">
-            <div class="search">
-                <input type="text" placeholder="Search..">
-            </div>
-            <div class="Containerfood">
-                <div class="card-food">
-                    <div class="header-card">
-                        <div class="img">
-                            <img src="anna-removebg-preview.png" alt="">
-                        </div>
-                        <div class="detail">
-                            <p>Magelangan</p>
-                            <p>Yogyakarta</p>
-                        </div>
-                    </div>
-                    <div class="info-card">
-                        <div class="inf">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, ipsa nesciunt
-                                consequuntur labore dolorum assumenda enim repellendus rem quo ad?</p>
-                        </div>
-                    </div>
-                    <div class="btn-detail">
-                        <button class="detail_btn">Detail</button>
-                        <div class="time">
-                            <button><i class="ri-heart-add-line"></i></button>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-food">
-                    <div class="header-card">
-                        <div class="img">
-                            <img src="anna-removebg-preview.png" alt="">
-                        </div>
-                        <div class="detail">
-                            <p>Magelangan</p>
-                            <p>Yogyakarta</p>
-                        </div>
-                    </div>
-                    <div class="info-card">
-                        <div class="inf">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, ipsa nesciunt
-                                consequuntur labore dolorum assumenda enim repellendus rem quo ad?</p>
-                        </div>
-                    </div>
-                    <div class="btn-detail">
-                        <button class="detail_btn">Detail</button>
-                        <div class="time">
-                            <button><i class="ri-heart-add-line"></i></button>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-food">
-                    <div class="header-card">
-                        <div class="img">
-                            <img src="anna-removebg-preview.png" alt="">
-                        </div>
-                        <div class="detail">
-                            <p>Magelangan</p>
-                            <p>Yogyakarta</p>
-                        </div>
-                    </div>
-                    <div class="info-card">
-                        <div class="inf">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, ipsa nesciunt
-                                consequuntur labore dolorum assumenda enim repellendus rem quo ad?</p>
-                        </div>
-                    </div>
-                    <div class="btn-detail">
-                        <button class="detail_btn">Detail</button>
-                        <div class="time">
-                            <button><i class="ri-heart-add-line"></i></button>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-food">
-                    <div class="header-card">
-                        <div class="img">
-                            <img src="anna-removebg-preview.png" alt="">
-                        </div>
-                        <div class="detail">
-                            <p>Magelangan</p>
-                            <p>Yogyakarta</p>
-                        </div>
-                    </div>
-                    <div class="info-card">
-                        <div class="inf">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, ipsa nesciunt
-                                consequuntur labore dolorum assumenda enim repellendus rem quo ad?</p>
-                        </div>
-                    </div>
-                    <div class="btn-detail">
-                        <button class="detail_btn">Detail</button>
-                        <div class="time">
-                            <button><i class="ri-heart-add-line"></i></button>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-food">
-                    <div class="header-card">
-                        <div class="img">
-                            <img src="anna-removebg-preview.png" alt="">
-                        </div>
-                        <div class="detail">
-                            <p>Magelangan</p>
-                            <p>Yogyakarta</p>
-                        </div>
-                    </div>
-                    <div class="info-card">
-                        <div class="inf">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, ipsa nesciunt
-                                consequuntur labore dolorum assumenda enim repellendus rem quo ad?</p>
-                        </div>
-                    </div>
-                    <div class="btn-detail">
-                        <button class="detail_btn">Detail</button>
-                        <div class="time">
-                            <button><i class="ri-heart-add-line"></i></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="cardcontainer">
         </div>
-    </body>
-    </body>
+    
+        <label class='none'>
+            <input type="checkbox" name="remember"> See Pasword
+            <button></button>
+        </label>
 
+    </section>
+   
+    <script src="script.js"></script>
+    <script src="myscript.js"></script>
+    
+</body>
 </html>
