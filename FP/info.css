@@ -82,14 +82,13 @@ body {
 }
 
 .slideInfo{
-    width: 90%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     margin: 50px 50px 50px 50px;
     color: #fff;
     padding: 25px 40px;
-    background: black;
-    height: 200px;
+    height: 400px;
     position: relative;
 }
 
@@ -112,11 +111,13 @@ body {
     width: 300px;
 }
 
+.carousel-item 
+{
+    width: 10%;
+    height: 300px;
+}
+
 .title-info{
     padding: 10px 10px;
 }
 
-.fas {
-    font-size: 20px;
-    margin-right: 10px;
-}
