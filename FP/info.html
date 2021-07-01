@@ -8,7 +8,8 @@
         <title>Document</title>
         <link rel="stylesheet" href="info.css">
         <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     </head>
 
     <body>
@@ -20,24 +21,27 @@
                 <ul>
                     <li>
                         <i class="fas ri-home-5-line"></i>
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <i class="fas ri-restaurant-line"></i>
-                        <a href="recipe.html">Recipe</a>
+                        <a href="Index.html">Home</a>
                     </li>
                     <li>
                         <i class="fas ri-bar-chart-grouped-line"></i>
                         <a href="Trendfood.html">Trend&nbsp;Food</a>
                     <li>
                         <i class="fas ri-heart-2-line"></i>
-                        <a href="Favorite.html">Favorite</a></li>
+                        <a href="Favorite.html">Favorite</a>
+                    </li>
                     <li>
                         <i class="fas ri-information-line"></i>
-                        <a href="info.html">Info</a></li>
+                        <a href="info.html">Article</a>
+                    </li>
                     <li>
                         <i class="fas ri-shield-user-line"></i>
-                        <a href="about.html">About Us</a></li>
+                        <a href="about.html">About</a>
+                    </li>
+                    <li>
+                        <i class="fas ri-phone-line"></i>
+                        <a href="Contact Us.html">Contact Us</a>
+                    </li>
                 </ul>
             </div>
             <div class="logout">
@@ -50,7 +54,32 @@
                 <input type="text" placeholder="Search..">
             </div>
             <div class="slideInfo">
-
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="https://asset.kompas.com/crops/8RFUjSSYrb5RMJW782cP0UR55QM=/0x44:1000x710/780x390/filters:watermark(data/photo/2020/03/10/5e6775b1d85b4.png,0,-0,1)/data/photo/2021/01/26/600fc38cb69cc.jpg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="https://asset.kompas.com/crops/WmXzYFy3HnRl9je9N3Bqf9Nid6s=/0x301:1000x968/780x390/data/photo/2021/01/28/601292fb4a95c.jpg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="https://akcdn.detik.net.id/visual/2020/09/16/kue-odading_169.jpeg?w=650" class="d-block w-100" alt="...">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                </div>    
             </div>
             <div class="mainInfo">
                 <div class="card-info">
