@@ -5,6 +5,7 @@ const checkbox = document.querySelector('input[type=checkbox]');
 //Index page
 const search = document.querySelector('.search input');
 const containerCard = document.querySelector('.cardcontainer');
+const banner = document.querySelector('.banner');
 //recipe page
 const recipeInfo = document.querySelector('#recipe_info');
 const recipeDetail = document.querySelector('#recipeDetail');
@@ -31,6 +32,7 @@ foodInformation();
 async function run() {
     const values = await getDataResep();
     showCard(values);
+    banner.style.display = "block";
 }
 
 
@@ -83,11 +85,14 @@ async function login(){
 function searchFood(e) {
     if(e.key == "Enter"){
         if(search.value == ''){
+            banner.style.display = "none";
             alert('Maaf inputan kosong');
             run();
         }else {
+            banner.style.display = "none";
             searchDataResep(search.value);
         }
+        
     }
 }
 
