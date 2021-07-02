@@ -6,16 +6,16 @@ body{
     font-family: 'Lato', sans-serif;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
 .menu-btn{
     position: absolute;
-    top: 15px;
+    background-color: aqua;
     left: 260px;
-    height: 45px;
+    height: 50px;
     width: 45px;
     text-align: center;
     background-color:white;
@@ -25,7 +25,7 @@ body{
 }
 
 .menu-btn.click{
-    left: 45px;
+    left: 15px;
 }
 
 .menu-btn span{
@@ -42,7 +42,8 @@ body{
     width: 250px;
     height: 100%;
     position: fixed;
-    left: 0px;
+    left: 0;
+    top: 0;
     transition: left 0.4s ease;
 }
 
@@ -111,14 +112,13 @@ body{
 
 /* new */
 .mainbar {
-    padding-top: 80px;
-    margin-left: 300px;
+    margin-top: 20px;
+    margin-left: 310px;
 }
 
 .mainbar.show{
-    margin-left: 45px;
+    margin-left: 75px;
     transition: left 0.5s ease-in-out;
-    
 }
 
 .search{    
@@ -130,7 +130,7 @@ body{
     width: 89%;
     border: none;
     border-radius: 5px;
-    height: 40px;
+    height: 50px;
     padding: 0 60px 0 20px;
 }
 
@@ -147,7 +147,7 @@ body{
         rgba(254,79,80,1) 0%, 
         rgba(255,79,79,1) 0%, 
         rgba(83,73,237,0.8057598039215687) 35%);
-    height: 170px;
+    height: 200px;
     margin-top: 50px;
 }
 
@@ -168,11 +168,12 @@ body{
 
 
 .banner-img img{
-    
-    width: 200px;
+    width: 210px;
     float: right;
-    margin-top: -60px;
+    margin-top: -33px;
+    
 }
+
 
 /* new */
 .cardcontainer {
@@ -185,8 +186,8 @@ body{
 
 .card-food {
     background-color: #fff;
-    max-width: 250px;
-    margin: 8px;
+    max-width: 280px;
+    margin: 10px;
     padding: 15px 30px;
     border-radius: 20px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, .1);
