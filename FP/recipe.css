@@ -1,5 +1,185 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC&display=swap');
+
+body{
+    background-color: #e8e7ff;
+    font-family: 'Lato', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.menu-btn{
+    position: absolute;
+    top: 15px;
+    left: 260px;
+    height: 45px;
+    width: 45px;
+    text-align: center;
+    background-color:white;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: left 0.4s ease;
+    position: sticky;
+}
+
+.menu-btn.click{
+    left: 45px;
+}
+
+.menu-btn span{
+    font-size: 28px;
+    line-height: 45px;
+}
+
+.menu-btn.click span:before{
+    content: '\f00d';
+}
+
+.sidebar{
+    top: 0px;
+    background-color: white;
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    left: 0px;
+    transition: left 0.4s ease;
+}
+
+.sidebar.show{
+    left: -250px;
+}
+
+.title{
+    color: black;
+    text-align: center;
+    height:  15%;
+    padding-top: 10px;
+    font-size: 35px;
+}
+
+.title span{
+    color: #5349ed;
+    font-family: 'Dancing Script', cursive;
+}
+
+.menu{
+    height: 75%;
+    padding-left: 25px;
+    line-height: 50px;
+    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+}
+
+.menu ul{
+    list-style-type: none;
+}
+
+.sub-menu{
+    text-decoration: none;
+}
+
+.sub-menu:visited{
+    color: black;
+    padding-left: 10px;
+}
+
+.sub-menu:hover{
+    color: #5349ed;
+    padding-left: 10px;
+}
+
+.account{
+    height: 10%;
+    padding-left: 25px;
+    line-height: 50px;
+    font-size: 20px;
+    
+}
+
+.account a{
+    text-decoration: none;
+    color: black;
+}
+
+
+.account a:visited{
+    color: black;
+    padding-left: 10px;
+}
+
+.search{
+    width: 0;
+    height: 0;
+}
+
+.search input{
+    width: 0;
+    height: 0;
+}
+
+/* new */
+.mainbar {
+    margin-left: 320px;
+}
+
+.mainbar.show{
+    margin-left: 95px;
+    transition: left 0.5s ease-in-out;
+    
+}
+
+.video{
+    width: 95%;
+}
+.detailrecipe{
+    width: 95%;
+    background-color: #fff;
+    margin: 20px 0;
+    border-radius: 20px 20px 0 0;
+}
+
+.detailrecipe .title{
+    padding: 40px;
+    padding-bottom: 0;
+    text-align: left;
+    font-size: 30px;
+}
+
+.detailrecipe .bahan, .detailrecipe .langkah{
+    padding: 40px;
+    padding-top: 0;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 30px;
+    padding-top: 20px;
+    padding-left: 70px;
+    padding-bottom: 40px;
+}
+
+/* .detailrecipe ol li {
+    padding: 5px;
+} */
+/* .fas {
+    font-size: 20px;
+    margin-right: 10px;
+} */
+.ingredient,
+.step {
+   font-weight: 300;
+}
+
+.none {
+    display: none;
+} 
+
+
+
+/* @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
 
 * {
     box-sizing: border-box;
@@ -93,4 +273,4 @@ body {
 
 .none {
     display: none;
-}
+} */
