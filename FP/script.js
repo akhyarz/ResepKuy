@@ -1,3 +1,10 @@
+//sidebar
+$('.menu-btn').click(function(){
+    $(this).toggleClass('click');
+    $('.sidebar').toggleClass('show');
+    $('.mainbar').toggleClass('show');
+});
+
 //login page
 const btn = document.querySelector('button');
 const form = document.querySelectorAll('.form input');

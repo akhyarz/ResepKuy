@@ -22,6 +22,7 @@ body{
     border-radius: 3px;
     cursor: pointer;
     transition: left 0.4s ease;
+    position: sticky;
 }
 
 .menu-btn.click{
@@ -38,6 +39,7 @@ body{
 }
 
 .sidebar{
+    top: 0px;
     background-color: white;
     width: 250px;
     height: 100%;
@@ -111,27 +113,28 @@ body{
 
 /* new */
 .mainbar {
-    padding-top: 80px;
-    margin-left: 300px;
+    margin-left: 320px;
 }
 
 .mainbar.show{
-    margin-left: 45px;
+    margin-left: 100px;
     transition: left 0.5s ease-in-out;
     
 }
 
-.search{    
-    width: 100%;
+.search{
+    margin-top: -30px;
+    width: 95%;
     height: 50px;
 }
 
 .search input {
-    width: 89%;
+    float: right;
+    width: 99%;
     border: none;
     border-radius: 5px;
-    height: 40px;
-    padding: 0 60px 0 20px;
+    height: 45px;
+    padding: 0 0 0 1%;
 }
 
 .search input:focus {
@@ -149,7 +152,7 @@ body{
 
 .card-food {
     background-color: #fff;
-    max-width: 250px;
+    width: 95%;
     margin: 8px;
     padding: 15px 30px;
     border-radius: 20px;
