@@ -34,7 +34,7 @@ body{
 .name{
     background-color: whitesmoke;
     border: 1px solid grey;
-    color: whitesmoke;
+    color: black;
     width: 45%;
     height: 70px;
     padding: 6px;
@@ -46,7 +46,7 @@ body{
 .email{
     background-color: whitesmoke;
     border: 1px solid grey;
-    color: whitesmoke;
+    color:black;
     width: 45%;
     height: 70px;
     padding: 6px;
@@ -58,7 +58,7 @@ body{
 .subject{
     background-color: whitesmoke;
     border: 1px solid grey;
-    color: whitesmoke;
+    color: black;
     width: 93.5%;
     height: 70px;
     padding: 6px;
@@ -69,7 +69,7 @@ body{
 .comment{
     background-color: whitesmoke;
     border: 1px solid grey;
-    color: whitesmoke;
+    color: black;
     width: 93.5%;
     padding: 12px;
     font-size: 15px;
@@ -79,7 +79,7 @@ body{
     border-radius: 8px;
     margin-bottom: 20px;
 }
-.button-send{
+.btn-send{
     background-color: whitesmoke;
     width: 93.5%;
     height: 46px;
@@ -101,7 +101,7 @@ body{
 .comment:hover{
     border-color:whitesmoke;
 }
-input.button-send:hover, input.button-send:active{
+.btn-send:hover, .btn-send:active{
     background: rgb(83,73,237);
     color: whitesmoke;
 }
@@ -148,3 +148,8 @@ background: linear-gradient(0deg, rgba(83,73,237,0.7483368347338936) 0%, rgba(16
 .link:hover { 
     color: #5349ed;
 }
+
+.alert{
+    width: 93.5%;
+}
+
