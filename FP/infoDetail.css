@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+
+body{
+    background-color: #e8e7ff;
+    font-family: 'Lato', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.menu-btn{
+    position: absolute;
+    left: 260px;
+    height: 50px;
+    width: 45px;
+    text-align: center;
+    background-color:white;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: left 0.4s ease;
+    position: fixed;
+    
+}
+
+.menu-btn.click{
+    left: 15px;
+}
+
+.menu-btn span{
+    font-size: 28px;
+    line-height: 45px;
+}
+
+.menu-btn.click span:before{
+    content: '\f00d';
+}
+
+.sidebar{
+    background-color: white;
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    left: 0px;
+    top: 0;
+    transition: left 0.4s ease;
+    border-right: .5px solid rgba(0, 0, 0,.1);
+}
+
+.sidebar.show{
+    left: -250px;
+}
+
+.title{
+    color: black;
+    text-align: center;
+    height:  15%;
+    padding-top: 10px;
+    font-size: 35px;
+}
+
+.title span{
+    color: #5349ed;
+    font-family: 'Dancing Script', cursive;
+}
+
+.menu{
+    height: 75%;
+    padding-left: 25px;
+    line-height: 50px;
+    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+}
+
+.menu ul{
+    list-style-type: none;
+}
+
+.sub-menu{
+    text-decoration: none;
+}
+
+.sub-menu:visited{
+    color: black;
+    padding-left: 10px;
+}
+
+.sub-menu:hover{
+    color: #5349ed;
+    padding-left: 10px;
+}
+
+.account{
+    height: 10%;
+    padding-left: 25px;
+    line-height: 50px;
+    font-size: 20px;
+    
+}
+
+.account a{
+    text-decoration: none;
+    color: black;
+}
+
+
+.account a:visited{
+    color: black;
+    padding-left: 10px;
+}
+
+
+/* new */
+.mainbar {
+    margin-top: 20px;
+    margin-left: 310px;
+}
+.mainbar.show{
+    margin-left: 75px;
+    transition: left 0.5s ease-in-out;
+}
+
+.card-info {
+    background-color: #fff;
+    width: 350px;
+    cursor: pointer;
+    margin: 8px;
+    cursor: pointer;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .1);
+    position: relative;
+}
+.img-info img{
+    width: 100%;
+    height: 200px;
+}
+.title-info{
+    padding: 10px 10px;
+}
+.author {
+    display: flex;
+    font-size: 13px;
+    justify-content: space-between;
+    padding: 0 10px;
+    color: rgba(0, 0, 0, .5);
+    margin-bottom: 10px;
+}
+
+.container_artikel {
+    border-radius: 10px;
+    background-color: #fff;
+    width: 95%;
+    padding: 20px;
+}
+.title-Artikel {
+    text-align: center;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+.title-Artikel p {
+    color: rgba(0, 0, 0, .5);
+}
+.banner {
+    text-align: center;
+}
+.banner img {
+    height: 500px;
+    max-width: 80%;
+    object-fit: cover;
+    padding:20px 5px 20px 20px;
+    margin-bottom: 50px;
+}
+.img_artikel {
+    text-align: center;   
+}
+.img_artikel img {
+    height: 500px;
+    min-width: 80%; 
+    object-fit: contain;
+}
+
+.pendahuluan {
+    line-height:30px;
+    display: flex;
+    justify-content:center;
+    font-size: 18px;
+}
+.pendahuluan p {
+    width: 90%;
+    text-align: justify;
+}
+.container_artikel ol {
+    font-size: 25px;
+}
+.content {
+    font-size: 18px;
+    line-height: 30px;
+    text-align:justify;
+    margin: 20px 0;
+}
+.container_card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.author_detail {
+    display: flex;
+    justify-content: center;
+}
+.author_detail p{
+    margin: 0 10px;
+}
+
+.judul {
+    text-align: center;
+    margin-top: 30px;
+    border-bottom: .5px solid rgba(0, 0, 0, .3);
+}
+.btn_pagedetail {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    opacity: 0;
+    position: absolute;
+}
+.search {
+    display: none;
+}
+.li_artikel
+{
+    padding: 100px;
+    padding-top: 50px;
+}
+
+.li_artikel img
+{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
