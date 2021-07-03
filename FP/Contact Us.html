@@ -68,14 +68,14 @@
             <div class="col"></div>
             <div class="col">
               <h5 class="h5-contact"><a class="link" href="Index.html">Home</a></h5>
+              <h5 class="h5-contact"><a class="link" href="Trendingfood.html">Trending Food</a></h5>
+            </div>
+            <div class="col">
               <h5 class="h5-contact"><a class="link" href="Favorite.html">Favorite</a></h5>
+              <h5 class="h5-contact"><a class="link" href="Info.html">Articles</a></h5>
             </div>
             <div class="col">
-              <h5 class="h5-contact"><a class="link" href="Trendfood.html">Trend Food</a></h5>
               <h5 class="h5-contact"><a class="link" href="About Us.html">About Us</a></h5>
-            </div>
-            <div class="col">
-              <h5 class="h5-contact"><a class="link" href="Info.html">News</a></h5>
             </div>
             <div class="col">
               <h2 class="h2-contact"><span>Resep</span>Kuy</h2>
@@ -87,15 +87,20 @@
         <script>
           const scriptURL = 'https://script.google.com/macros/s/AKfycby3pUOkKfdEX2fb_nPCL0BljGvjDtuQnjLdIPF2fRO6zU15eeXIKrBVg6VB3GvENR0T/exec'
           const form = document.forms['resepkuy-contact-form']
-          const alert = document.querySelector('.alert');
+          const btnSend = document.querySelector('.btn-send');
           const spinner = document.querySelector('.spinner');
+          const alert = document.querySelector('.alert');
         
           form.addEventListener('submit', e => {
             e.preventDefault()
+            btnSend.classList.toggle('d-none');
             spinner.classList.toggle('d-none');
+            
             fetch(scriptURL, { method: 'POST', body: new FormData(form)})
               .then(response => {
+                btnSend.classList.toggle('d-none');
                 spinner.classList.toggle('d-none');
+
                 alert.classList.toggle('d-none');
                 form.reset();
                 console.log('Success!', response);
