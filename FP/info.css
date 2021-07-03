@@ -13,19 +13,20 @@ body{
 
 .menu-btn{
     position: absolute;
-    position: fixed;
+    top: 15px;
     left: 260px;
-    height: 50px;
+    height: 45px;
     width: 45px;
     text-align: center;
     background-color:white;
     border-radius: 3px;
     cursor: pointer;
     transition: left 0.4s ease;
+    position: sticky;
 }
 
 .menu-btn.click{
-    left: 15px;
+    left: 45px;
 }
 
 .menu-btn span{
@@ -112,41 +113,33 @@ body{
 
 /* new */
 .mainbar {
-    margin-top: 20px;
-    margin-left: 310px;
-    border-radius: 10px;
-    background-color: #fff;
-    padding: 20px;
-    
-    width: 71%;
+    margin-left: 320px;
 }
 
 
 .mainbar.show{
-    margin-left: 75px;
+    margin-left: 100px;
     transition: left 0.5s ease-in-out;
-    width: 91%;
 }
 
-.search{    
-    width: 100%;
+.search{
+    margin-top: -30px;
+    width: 95%;
     height: 50px;
 }
 
 .search input {
+    float: right;
     width: 100%;
     border: none;
     border-radius: 5px;
-    height: 50px;
-    padding: 0 60px 0 20px;
-    background-color: rgba(0, 0, 0,.03);
+    height: 45px;
+    padding: 0 0 0 1%;
 }
 
 .search input:focus {
     outline-style: none;
 }
-
-
 
 .none {
     display: none;
@@ -187,25 +180,24 @@ body{
 }
 
 .slide-info{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    margin: 50px 50px 50px 50px;
-    color: #fff;
-    padding: 25px 40px;
-    height: 400px;
-    position: relative;
-}
-.container {
-    width: 100%;
-    margin-left: 0;
+    margin-top: 50px;
+    width: 95%;
+    border-radius: 5px;
 }
 .main-info{
+    background-color: white;
     margin-top: 40px;
-    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: 95%;
     display: flex;
     flex-wrap: wrap;
+    border-radius: 20px 20px 0 0;
     justify-content:center;
+}
+
+.carousel-inner{
+    border-radius: 5px;
 }
 
 .card-info {
@@ -225,7 +217,6 @@ body{
     height: 200px;
 }
 .carousel-item img{
-    width: 80%;
     max-height: 400px;
     object-fit: cover;
 }
@@ -234,11 +225,7 @@ body{
 .title-info{
     padding: 10px 10px;
 }
-.container {
-    margin-top: 20px;
-    width: 100%;
-    margin-bottom: 30px;
-}
+
 .author {
     display: flex;
     font-size: 13px;
@@ -254,10 +241,7 @@ button {
     opacity: 0;
     position: absolute;
 }
-.carousel-inner {
-    border-radius:10px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, .3);
-}
+
 .notFound {
     width: 100%;
     height: 80vh;
