@@ -13,6 +13,8 @@ body{
     background-image: url(https://cdn.discordapp.com/attachments/764062693124341760/860801817311313920/ella.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
+    background-color: rgba(255, 255, 255, .15);  
+    backdrop-filter: blur(5px);
     position: static;
     display: block;
     overflow: visible;
@@ -24,6 +26,7 @@ body{
     margin-bottom: 70px;
     color: rgb(83,73,237);
     color: #5349ed;
+    font-weight: bold;
 }
 .h3-contact{
     color: #5349ed;
@@ -81,12 +84,13 @@ body{
 }
 .btn-send{
     background-color: whitesmoke;
+    border: 2px solid black;
     width: 93.5%;
     height: 46px;
     margin: auto;
     cursor: pointer;
     border-radius: 8px;
-    color: black;
+    color: #5349ed;
     font-weight: bold;
 }
 .name:hover{
