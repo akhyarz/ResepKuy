@@ -106,13 +106,15 @@ body{
     color: whitesmoke;
 }
 .sosmed{
-    background: rgb(83,73,237);
-background: linear-gradient(0deg, rgba(83,73,237,0.7483368347338936) 0%, rgba(167,76,160,0.7455357142857143) 50%, rgba(255,79,79,0.7483368347338936) 100%);
+    background: rgb(190,190,190);
+    background: linear-gradient(0deg, rgba(190,190,190,0.6530987394957983) 100%, rgba(232,231,255,1) 100%);
+    color: black;
     padding-top: 30px;
     padding-bottom: 20px;
     text-align: center;
     font-size: 15px;
     font-weight: 100;
+    font-weight: bolder;
     cursor: pointer;
 }
 .h6-contact:hover{
@@ -122,11 +124,11 @@ background: linear-gradient(0deg, rgba(83,73,237,0.7483368347338936) 0%, rgba(16
 .contact{
     margin-bottom: 222px;
 }
-.h6-contact{
+.h5-contact{
     padding-bottom: 20px;
 }
 .h2-contact span{
-    margin-left: -20%;
+    margin-top: 50px;
     font-family: 'Dancing Script', cursive;
     font-size: 40px;
     color: #5349ed;
@@ -140,16 +142,14 @@ background: linear-gradient(0deg, rgba(83,73,237,0.7483368347338936) 0%, rgba(16
 .link {
     padding-bottom: 20px;
     text-decoration: none;
-    color:whitesmoke;
-}
-/* .link:visited {
-    color: black;
-} */
-.link:hover { 
-    color: #5349ed;
+    color:black;
+    font-weight: bolder;
 }
 
 .alert{
     width: 93.5%;
 }
-
+.spinner{
+    width: 93.5%;
+    color: black;
+}
