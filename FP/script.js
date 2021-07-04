@@ -196,7 +196,7 @@ function foodInfo(val) {
                     </div>
                     <div class="headerTitle">
                         <h1 class="img">${val.title}</h1>
-                        <p>Jawa Timur</p>
+                        <p>${val.origin}</p>
                     </div>
                 </div>
                 <div class="Detailfood">
