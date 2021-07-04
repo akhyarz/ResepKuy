@@ -1,3 +1,11 @@
+// sidebar
+$('.menu-btn').click(function(){
+    $(this).toggleClass('click');
+    $('.sidebar').toggleClass('show');
+    $('.mainbar').toggleClass('show');
+});
+
+
 const mainInfo = document.querySelector('.main-info');
 const wrap = document.querySelector('.wrap');
 const cardInfo = document.querySelector('.container_card');
