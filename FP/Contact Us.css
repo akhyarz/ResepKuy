@@ -157,3 +157,32 @@ body{
     width: 93.5%;
     color: black;
 }
+
+@media screen and (max-width :600px) {
+    .col-5
+    {
+        width: 100%;
+    }
+    .input
+    {
+        width: 100%;
+    }
+    .info
+    {
+        text-align: center;
+        width: 100%;
+    }
+    .sosmed col 
+    {
+        width: 100%;
+    }
+    .csosmed, .cmenu-1, .cmenu-2 , .cmenu-3
+    {
+        width: 100%;
+    }
+    .ctitel
+    {
+        width: 100%;
+        text-align: center;
+    }
+}
