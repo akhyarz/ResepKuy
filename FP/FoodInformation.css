@@ -27,7 +27,7 @@ body{
 }
 
 .menu-btn.click{
-    left: 45px;
+    left: 30px;
 }
 
 .menu-btn span{
@@ -57,7 +57,7 @@ body{
     color: black;
     text-align: center;
     height:  15%;
-    padding-top: 10px;
+    padding-top: 25px;
     font-size: 35px;
 }
 
@@ -67,9 +67,9 @@ body{
 }
 
 .menu{
-    height: 75%;
+    height: 70%;
     padding-left: 25px;
-    line-height: 50px;
+    line-height: 60px;
     font-size: 20px;
     font-family: 'Lato', sans-serif;
 }
@@ -80,35 +80,36 @@ body{
 
 .sub-menu{
     text-decoration: none;
-}
-
-.sub-menu:visited{
     color: black;
-    padding-left: 10px;
 }
-
+.sub-menu-poin
+ {
+    border-left-color: #5349ed;
+    border-left-style: solid;
+    color: #5349ed;
+    padding-left: 10px;
+    text-decoration: none;
+ }
 .sub-menu:hover{
     color: #5349ed;
     padding-left: 10px;
 }
 
 .account{
-    height: 10%;
-    padding-left: 25px;
+    text-align: center;
+    height: 15%;
+    margin-left: -20px;
     line-height: 50px;
-    font-size: 20px;
+    font-size: 25px;
     
 }
-
 .account a{
     text-decoration: none;
-    color: black;
+    padding-left: 5px;
+    color: #5349ed;
 }
-
-
-.account a:visited{
-    color: black;
-    padding-left: 10px;
+.account i{
+    color: #5349ed;
 }
 
 .search{

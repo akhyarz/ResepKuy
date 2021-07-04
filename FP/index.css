@@ -11,11 +11,10 @@ body{
     padding: 0;
 }
 
-
 .menu-btn{
     position: absolute;
     top: 15px;
-    left: 260px;
+    left: 30px;
     height: 45px;
     width: 45px;
     text-align: center;
@@ -27,7 +26,7 @@ body{
 }
 
 .menu-btn.click{
-    left: 45px;
+    left: 260px;
 }
 
 .menu-btn span{
@@ -45,19 +44,19 @@ body{
     width: 250px;
     height: 100%;
     position: fixed;
-    left: 0px;
+    left: -250px;
     transition: left 0.4s ease;
 }
 
 .sidebar.show{
-    left: -250px;
+    left: 0px;
 }
 
 .title{
     color: black;
     text-align: center;
     height:  15%;
-    padding-top: 10px;
+    padding-top: 25px;
     font-size: 35px;
 }
 
@@ -67,9 +66,9 @@ body{
 }
 
 .menu{
-    height: 75%;
+    height: 70%;
     padding-left: 25px;
-    line-height: 50px;
+    line-height: 60px;
     font-size: 20px;
     font-family: 'Lato', sans-serif;
 }
@@ -80,12 +79,16 @@ body{
 
 .sub-menu{
     text-decoration: none;
-}
-
-.sub-menu:visited{
     color: black;
-    padding-left: 10px;
 }
+ .sub-menu-poin
+ {
+    border-left-color: #5349ed;
+    border-left-style: solid;
+    color: #5349ed;
+    padding-left: 10px;
+    text-decoration: none;
+ }
 
 .sub-menu:hover{
     color: #5349ed;
@@ -93,32 +96,30 @@ body{
 }
 
 .account{
-    height: 10%;
-    padding-left: 25px;
+    text-align: center;
+    height: 15%;
+    margin-left: -20px;
     line-height: 50px;
-    font-size: 20px;
-    
+    font-size: 25px;
 }
 
 .account a{
     text-decoration: none;
-    color: black;
+    padding-left: 5px;
+    color: #5349ed;
 }
 
-
-.account a:visited{
-    color: black;
-    padding-left: 10px;
+.account i{
+    color: #5349ed;
 }
-
 
 /* new */
 .mainbar {
-    margin-left: 320px;
+    margin-left: 100px;
 }
 
 .mainbar.show{
-    margin-left: 100px;
+    margin-left: 320px;
     transition: left 0.5s ease-in-out;
     
 }
@@ -155,32 +156,32 @@ body{
         height: 170px;
         margin-top: 50px;
 
-        
+
     }  
-    
+
     .banner-txt{
         float: left;
         margin-left: 50px;
         margin-top: 20px;
     }
-    
+
     .banner-txt h1{
        font-size: 40px;
     }
-    
+
     .banner-txt p{
         font: size 30px;;
         line-height: 50px;
     }
-    
-    
+
+
     .banner-img img{
-        
+
         width: 200px;
         float: right;
         margin-top: -52px;
     }
-    
+
 }
 
 @media screen and (max-width:920px){
@@ -188,25 +189,22 @@ body{
         width: 0px;
         display: none;
     }
-
     .banner-txt{
         display: none;
     }
-    
     .banner-txt h1{
         display: none;
     }
-    
+
     .banner-txt p{
         display: none;
     }
-    
-    
+
+
     .banner-img img{
         display: none;
     }
 }
-
 /* new */
 .cardcontainer {
     padding-top: 50px;
@@ -311,5 +309,6 @@ button i {
     display: flex;
     align-items: center;
 }
-
-
+.like {
+    color:rgb(245, 11, 11);
+}
