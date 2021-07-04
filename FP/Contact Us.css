@@ -83,15 +83,24 @@ body{
     margin-bottom: 20px;
 }
 .btn-send{
-    background-color: whitesmoke;
-    border: 2px solid black;
     width: 93.5%;
-    height: 46px;
-    margin: auto;
+    height: 35px;
+    margin: 10px 0 5px 0;
+    border: none;
+    color: #fff;
+    background-color: #5349ed;
+    border-radius: 7px;
+    font-size: 16px;
     cursor: pointer;
-    border-radius: 8px;
-    color: #5349ed;
-    font-weight: bold;
+    box-shadow: 4px 5px 6px rgba(0, 0, 0, 0.3);
+    transform: translate(0,0);
+    transition-duration: .1s;
+}
+.btn-send:active {
+    transform: translate(3px,3px);
+    box-shadow: 4px 5px 6px rgba(0, 0, 0, 0);
+    background-color: #0a0092;
+    
 }
 .name:hover{
     border-color:whitesmoke;
