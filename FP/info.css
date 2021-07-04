@@ -135,7 +135,7 @@ body{
 
 .search input {
     float: right;
-    width: 99%;
+    width: 100%;
     border: none;
     border-radius: 5px;
     height: 45px;
