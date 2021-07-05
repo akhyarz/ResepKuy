@@ -282,9 +282,9 @@ span {
     }
     .loginpage {
         background-color: rgba(255, 255, 255,.97);
-        width: 80%;
-        margin-left: 10%;
-        margin-right: 10%;
+        width: 96%;
+        margin-left: 2%;
+        margin-right: 2%;
         padding: 40px;
     }
     .loginpage h1 {

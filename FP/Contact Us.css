@@ -19,7 +19,6 @@ body{
     display: block;
     overflow: visible;
     height: auto;
-    min-height: 850px;
 }
 .section{
     width:100%;

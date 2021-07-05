@@ -15,7 +15,7 @@ body{
 .menu-btn{
     position: absolute;
     top: 15px;
-    left: 260px;
+    left: 30px;
     height: 45px;
     width: 45px;
     text-align: center;
@@ -27,7 +27,7 @@ body{
 }
 
 .menu-btn.click{
-    left: 30px;
+    left: 260px;
 }
 
 .menu-btn span{
@@ -45,12 +45,12 @@ body{
     width: 250px;
     height: 100%;
     position: fixed;
-    left: 0px;
+    left: -250px;
     transition: left 0.4s ease;
 }
 
 .sidebar.show{
-    left: -250px;
+    left: 0px;
 }
 
 .title{
@@ -127,12 +127,12 @@ body{
 
 /* new */
 .mainbar {
-    margin-left: 320px;
+    margin-left: 95px;
     margin-top: -30px;
 }
 
 .mainbar.show{
-    margin-left: 95px;
+    margin-left: 320px;
     transition: left 0.5s ease-in-out;
     
 }
