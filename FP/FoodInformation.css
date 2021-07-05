@@ -36,7 +36,7 @@ body{
 }
 
 .menu-btn.click span:before{
-    content: '\f0c9';
+    content: '\f00d';
 }
 
 .sidebar{
