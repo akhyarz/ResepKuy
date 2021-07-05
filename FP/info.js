@@ -11,6 +11,7 @@ const wrap = document.querySelector('.wrap');
 const cardInfo = document.querySelector('.container_card');
 const search = document.querySelector('.search input');
 const container = document.querySelector('.container');
+const judul = document.querySelector('.Judul');
 
 search.addEventListener('keyup',searhShow);
 
@@ -83,6 +84,7 @@ async function showDetail() {
         } = newData;
         showDetailArtikel(values);
         showArrayDetail(values.content);
+        showTitle(values);
     } catch (error) {
         console.log(error);
     }
@@ -195,4 +197,8 @@ function error() {
     <img  src="https://cdn.discordapp.com/attachments/764062693124341760/859859375694151700/3024051-removebg-preview.png" alt="">
     <h3>Maaf data tidak ditemukan (:</h3>
     </div>`;
+}
+function showTitle(val)
+{
+    judul.innerText = `${val.title}`;
 }
