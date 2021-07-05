@@ -325,17 +325,16 @@ function mapBahan(bahan,langkah) {
 async function getFavoriteUser() {
     try {
         const id = localStorage.getItem('idUser');
-
         const data = await fetch(`https://calm-refuge-58943.herokuapp.com/userById/${id}`);
         const newData = await data.json();
         const {values} = newData;
-            
-        searchFavorite(values.favorit); 
+
         getCardFavorite(values.favorit);
         dataFavoriteNull(values.favorit);
         setTimeout( () => {
             saveLikeUser(values);
         },2500);
+        searchFavorite(values.favorit); 
     } catch (error) {
         console.log(error);
     }
