@@ -110,7 +110,10 @@ function cekLoginOrNot() {
     if (user != null) {
         btnLog.innerText = 'Log Out';
         loginLogout();
-        getFavoriteUser();
+        setTimeout(() => {
+            getFavoriteUser();
+        }, 2000);
+        
     }else {
         try {
             cardfavorite.innerHTML = `<div class="error">
@@ -325,7 +328,7 @@ async function getFavoriteUser() {
         dataFavoriteNull(values.favorit);
         setTimeout( () => {
             saveLikeUser(values);
-        },2500);
+        },2000);
     } catch (error) {
         console.log(error);
     }
