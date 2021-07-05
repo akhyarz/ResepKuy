@@ -110,9 +110,7 @@ function cekLoginOrNot() {
     if (user != null) {
         btnLog.innerText = 'Log Out';
         loginLogout();
-        setTimeout(() => {
-            getFavoriteUser();
-        }, 2000);
+        getFavoriteUser();
         
     }else {
         try {
@@ -213,16 +211,20 @@ async function postFavorit(key) {
 }
 
 function searchFood(e) {
-    if(e.key == "Enter"){
-        if(search.value == ''){
-            banner.style.display = "none";
-            alert('Maaf inputan kosong');
-            run();
-        }else {
-            banner.style.display = "none";
-            searchDataResep(search.value);
+    try {
+        if(e.key == "Enter"){
+            if(search.value == ''){
+                banner.style.display = "none";
+                alert('Maaf inputan kosong');
+                run();
+            }else {
+                banner.style.display = "none";
+                searchDataResep(search.value);
+                
+            }
             
         }
+    } catch (error) {
         
     }
 }
@@ -323,17 +325,65 @@ async function getFavoriteUser() {
         const newData = await data.json();
         const {values} = newData;
             
-        
+        searchFavorite(values.favorit); 
         getCardFavorite(values.favorit);
         dataFavoriteNull(values.favorit);
         setTimeout( () => {
             saveLikeUser(values);
-        },2000);
+        },2500);
     } catch (error) {
         console.log(error);
     }
 }
 
+function searchFavorite(val) {
+    const search = document.querySelector('.searchFavorit input');
+    const data = [];
+    let arr1 = [];
+    search.addEventListener('keyup',(a) => {
+        if (a.key == "Enter"){
+            if (search.value != ''){
+                for (let i = 0; i < val.length; i++) {
+                    if(val[i].includes(search.value)){
+                        arr1.push(val[i]);
+                    } 
+                }
+            } else{
+                alert('Maaf inputan kosong');
+                location.reload();
+                return false;
+            }
+            
+            dataSearchFavorite(data);
+            setTimeout(() => {
+                arr1 = [];
+            },500);
+            searchFavoritError(arr1);
+        }
+    });
+}
+
+function searchFavoritError(data) {
+    if (data != '') {
+        dataSearchFavorite(data);
+    }else {
+        card = '';
+        card += error();
+        cardfavorite.innerHTML = card;
+    }
+}
+async function dataSearchFavorite(val) {
+    const arr = [];
+    for (let i = 0; i < val.length; i++) {
+        const data = await  fetch(`https://calm-refuge-58943.herokuapp.com/getResepByKey/${val[i]}`);
+        const newData =  await data.json();
+        const {values} = newData;
+    
+        arr.push(values);
+    }
+    showCardFavorite(arr);
+
+}
 
 function dataFavoriteNull(favorit) {
     if (favorit == '') {
