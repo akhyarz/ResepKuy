@@ -24,7 +24,7 @@ btn.addEventListener('click', validasi);
 checkbox.addEventListener('click',check);
 
 
-//Index
+//menjalankan fungsi dari awal
 search.addEventListener('keyup',searchFood);
 
 document.addEventListener('click',(a) => {
@@ -35,9 +35,13 @@ document.addEventListener('click',(a) => {
     } else if (a.target.classList == 'detailbtn'){
         window.location.href = 'recipe.html';
     }else if (a.target.classList.value == 'ri-heart-add-fill') {
-        cekLike();
+        cekLike(a);
+    }else if (a.target.classList.value == 'ri-heart-add-fill like'){
+        cekLike(a);
     }
 });
+
+
 
 run();
 foodInformation();
@@ -134,46 +138,36 @@ function loginLogout() {
         console.log(error);
     }
 }
-
-function cekLike() {
+function cekLike(a) {
     const user = localStorage.getItem('idUser');
     if (user != null) {
-        likeUser();
-
+        if (a.target.classList.value == 'ri-heart-add-fill') {
+            
+            a.target.classList.add('like');
+            postFavorit(a.target.id);
+        } else if (a.target.classList.value == 'ri-heart-add-fill like'){
+            a.target.classList.remove('like');
+            deleteFavorite(a.target.id);
+        }
     }else {
         alert('Anda harus login terlebih dahulu');
     }
 }
 
-function likeUser(val) {
+
+function saveLikeUser(val) {
     try {
         const liked = document.querySelectorAll('.ri-heart-add-fill');
-        
+        const favorit = val.favorit;
         liked.forEach(el => {
-            el.addEventListener('click', () => {
-                if(el.classList.contains('like')){
-                    // deleteFavorite(el.id);
-                    el.classList.remove('like');
-                    console.log('gagal');
-                }else {
-                    el.classList.add('like');
-                    // postFavorit(el.id);
-                    console.log('berhasil');
+            favorit.forEach(fa => {
+                if(el.id == fa){
+                    el.classList.toggle('like');
                 }
             });
+            
         });
-        saveLikeUser(liked,val);
-    } catch (error) {
-        console.log(error);
-    }
-}
-function saveLikeUser(liked,val) {
-    try {
-        liked.forEach(el => {
-            if(val.includes(el.id)){
-                el.classList.add('like');
-            }
-        });
+        
     } catch (error) {
         console.log(error);
     }
@@ -212,6 +206,7 @@ async function postFavorit(key) {
         }
     };
     await fetch(`https://calm-refuge-58943.herokuapp.com/updateUser/`,config);
+
 }
 
 function searchFood(e) {
@@ -317,32 +312,6 @@ function mapBahan(bahan,langkah) {
 }
 
 
-//fovorite package
-
-async function likeFavoriteAndDel(val) {
-    const liked = document.querySelectorAll('.ri-heart-add-fill');
-    liked.forEach(el => {
-        el.addEventListener('click',() => {
-            deleteFavorite(el.id);
-            el.classList.remove('like');
-        });
-    });
-    showLike(liked,val);
-}
-
-function showLike(liked,val) {
-    try {
-        for (let i = 0; i < val.length; i++) {
-            if(val[i].key == liked[i].id){
-                liked[i].classList.add('like');
-            }
-        }
-    } catch (error) {
-        console.log(error);
-    }
-}
-
-
 async function getFavoriteUser() {
     try {
         const id = localStorage.getItem('idUser');
@@ -351,13 +320,18 @@ async function getFavoriteUser() {
         const newData = await data.json();
         const {values} = newData;
             
+        
         getCardFavorite(values.favorit);
-        likeUser(values.favorit); 
-        // dataFavoriteNull(values.favorit);
+        dataFavoriteNull(values.favorit);
+        setTimeout( () => {
+            saveLikeUser(values);
+        },2500);
     } catch (error) {
         console.log(error);
     }
 }
+
+
 function dataFavoriteNull(favorit) {
     if (favorit == '') {
         card = '';
@@ -375,7 +349,6 @@ async function getCardFavorite(val) {
         dataFavorite.push(values);
     }
     showCardFavorite(dataFavorite);
-    likeFavoriteAndDel(dataFavorite);
 }
 
 function showCardFavorite(val) {
@@ -395,7 +368,7 @@ function foodInfo(val) {
                     </div>
                     <div class="headerTitle">
                         <h1 class="img">${val.title}</h1>
-                        <p>${val.origin}</p>
+                        <p>Jawa Timur</p>
                     </div>
                 </div>
                 <div class="Detailfood">

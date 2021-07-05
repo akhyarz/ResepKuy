@@ -23,8 +23,7 @@ const recipeDetail = document.querySelector('#recipeDetail');
 btn.addEventListener('click', validasi);
 checkbox.addEventListener('click',check);
 
-
-//Index
+//menjalankan fungsi dari awal
 search.addEventListener('keyup',searchFood);
 
 document.addEventListener('click',(a) => {
@@ -152,12 +151,12 @@ function likeUser(val) {
         liked.forEach(el => {
             el.addEventListener('click', () => {
                 if(el.classList.contains('like')){
-                    // deleteFavorite(el.id);
+                    deleteFavorite(el.id);
                     el.classList.remove('like');
                     console.log('gagal');
                 }else {
                     el.classList.add('like');
-                    // postFavorit(el.id);
+                    postFavorit(el.id);
                     console.log('berhasil');
                 }
             });
@@ -353,7 +352,6 @@ async function getFavoriteUser() {
             
         getCardFavorite(values.favorit);
         likeUser(values.favorit); 
-        // dataFavoriteNull(values.favorit);
     } catch (error) {
         console.log(error);
     }
@@ -460,8 +458,6 @@ function cardInfo(el) {
                 </div>  
             </div> `;
 }
-
-
 
 
 //error
