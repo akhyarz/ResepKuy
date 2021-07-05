@@ -37,6 +37,10 @@ body{
 .info p{
     color: black;
 }
+a{
+    text-decoration: none;
+    color: black;
+}
 .name{
     background-color: whitesmoke;
     border: 1px solid grey;

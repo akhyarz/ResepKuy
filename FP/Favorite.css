@@ -109,9 +109,11 @@ body{
     text-decoration: none;
     padding-left: 5px;
     color: #5349ed;
+    cursor: pointer;
 }
 .account i{
     color: #5349ed;
+    cursor: pointer;
 }
 
 

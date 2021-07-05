@@ -19,8 +19,10 @@ body {
 }
 
 .register {
-    width: 500px;
+    width: 480px;
     height: 500px;
+    margin-left: 10px;
+    margin-right: 10px;
     background-color: #fff;
     padding: 30px;
     border-radius: 20px;

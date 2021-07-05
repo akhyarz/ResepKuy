@@ -84,11 +84,12 @@ body
     height: 250px;
     width: 250px;
 }
+
 .Icon
 {
     font-size: 20px;
 }
-.Icon a
+.Icon a, a
 {
     text-decoration: none;
     color: black;

@@ -14,19 +14,20 @@ const search = document.querySelector('.search input');
 const containerCard = document.querySelector('.cardcontainer');
 const banner = document.querySelector('.banner');
 const btnLog = document.querySelector('.account a');
+//Judul
 const judul2 = document.querySelector('.Judul2');
+const judul = document.querySelector('.Judul');
 //favorite
 const cardfavorite = document.querySelector('.cardfavorite');
 //recipe page
 const recipeInfo = document.querySelector('#recipe_info');
 const recipeDetail = document.querySelector('#recipeDetail');
-const judul = document.querySelector('.Judul');
 //login
 btn.addEventListener('click', validasi);
 checkbox.addEventListener('click',check);
 
 
-//Index
+//menjalankan fungsi dari awal
 search.addEventListener('keyup',searchFood);
 
 document.addEventListener('click',(a) => {
@@ -37,9 +38,13 @@ document.addEventListener('click',(a) => {
     } else if (a.target.classList == 'detailbtn'){
         window.location.href = 'recipe.html';
     }else if (a.target.classList.value == 'ri-heart-add-fill') {
-        cekLike();
+        cekLike(a);
+    }else if (a.target.classList.value == 'ri-heart-add-fill like'){
+        cekLike(a);
     }
 });
+
+
 
 run();
 foodInformation();
@@ -109,6 +114,7 @@ function cekLoginOrNot() {
         btnLog.innerText = 'Log Out';
         loginLogout();
         getFavoriteUser();
+        
     }else {
         try {
             cardfavorite.innerHTML = `<div class="error">
@@ -136,46 +142,36 @@ function loginLogout() {
         console.log(error);
     }
 }
-
-function cekLike() {
+function cekLike(a) {
     const user = localStorage.getItem('idUser');
     if (user != null) {
-        likeUser();
-
+        if (a.target.classList.value == 'ri-heart-add-fill') {
+            
+            a.target.classList.add('like');
+            postFavorit(a.target.id);
+        } else if (a.target.classList.value == 'ri-heart-add-fill like'){
+            a.target.classList.remove('like');
+            deleteFavorite(a.target.id);
+        }
     }else {
         alert('Anda harus login terlebih dahulu');
     }
 }
 
-function likeUser(val) {
+
+function saveLikeUser(val) {
     try {
         const liked = document.querySelectorAll('.ri-heart-add-fill');
-        
+        const favorit = val.favorit;
         liked.forEach(el => {
-            el.addEventListener('click', () => {
-                if(el.classList.contains('like')){
-                    // deleteFavorite(el.id);
-                    el.classList.remove('like');
-                    console.log('gagal');
-                }else {
-                    el.classList.add('like');
-                    // postFavorit(el.id);
-                    console.log('berhasil');
+            favorit.forEach(fa => {
+                if(el.id == fa){
+                    el.classList.toggle('like');
                 }
             });
+            
         });
-        saveLikeUser(liked,val);
-    } catch (error) {
-        console.log(error);
-    }
-}
-function saveLikeUser(liked,val) {
-    try {
-        liked.forEach(el => {
-            if(val.includes(el.id)){
-                el.classList.add('like');
-            }
-        });
+        
     } catch (error) {
         console.log(error);
     }
@@ -214,19 +210,24 @@ async function postFavorit(key) {
         }
     };
     await fetch(`https://calm-refuge-58943.herokuapp.com/updateUser/`,config);
+
 }
 
 function searchFood(e) {
-    if(e.key == "Enter"){
-        if(search.value == ''){
-            banner.style.display = "none";
-            alert('Maaf inputan kosong');
-            run();
-        }else {
-            banner.style.display = "none";
-            searchDataResep(search.value);
+    try {
+        if(e.key == "Enter"){
+            if(search.value == ''){
+                banner.style.display = "none";
+                alert('Maaf inputan kosong');
+                run();
+            }else {
+                banner.style.display = "none";
+                searchDataResep(search.value);
+                
+            }
             
         }
+    } catch (error) {
         
     }
 }
@@ -273,6 +274,7 @@ async function foodInformation() {
         showFoodInfo(values);
         showRecipeDetail(values);
         mapBahan(values.ingredient,values.step);
+        ahah(values);
     } catch (er) {
         console.log(er);
         recipeInfo.innerHTML = error();
@@ -320,32 +322,6 @@ function mapBahan(bahan,langkah) {
 }
 
 
-//fovorite package
-
-async function likeFavoriteAndDel(val) {
-    const liked = document.querySelectorAll('.ri-heart-add-fill');
-    liked.forEach(el => {
-        el.addEventListener('click',() => {
-            deleteFavorite(el.id);
-            el.classList.remove('like');
-        });
-    });
-    showLike(liked,val);
-}
-
-function showLike(liked,val) {
-    try {
-        for (let i = 0; i < val.length; i++) {
-            if(val[i].key == liked[i].id){
-                liked[i].classList.add('like');
-            }
-        }
-    } catch (error) {
-        console.log(error);
-    }
-}
-
-
 async function getFavoriteUser() {
     try {
         const id = localStorage.getItem('idUser');
@@ -354,13 +330,66 @@ async function getFavoriteUser() {
         const newData = await data.json();
         const {values} = newData;
             
+        searchFavorite(values.favorit); 
         getCardFavorite(values.favorit);
-        likeUser(values.favorit); 
-        // dataFavoriteNull(values.favorit);
+        dataFavoriteNull(values.favorit);
+        setTimeout( () => {
+            saveLikeUser(values);
+        },2500);
     } catch (error) {
         console.log(error);
     }
 }
+
+function searchFavorite(val) {
+    const search = document.querySelector('.searchFavorit input');
+    const data = [];
+    let arr1 = [];
+    search.addEventListener('keyup',(a) => {
+        if (a.key == "Enter"){
+            if (search.value != ''){
+                for (let i = 0; i < val.length; i++) {
+                    if(val[i].includes(search.value)){
+                        arr1.push(val[i]);
+                    } 
+                }
+            } else{
+                alert('Maaf inputan kosong');
+                location.reload();
+                return false;
+            }
+            
+            dataSearchFavorite(data);
+            setTimeout(() => {
+                arr1 = [];
+            },500);
+            searchFavoritError(arr1);
+        }
+    });
+}
+
+function searchFavoritError(data) {
+    if (data != '') {
+        dataSearchFavorite(data);
+    }else {
+        card = '';
+        card += error();
+        cardfavorite.innerHTML = card;
+    }
+}
+async function dataSearchFavorite(val) {
+    const arr = [];
+    for (let i = 0; i < val.length; i++) {
+        const data = await  fetch(`https://calm-refuge-58943.herokuapp.com/getResepByKey/${val[i]}`);
+        const newData =  await data.json();
+        const {values} = newData;
+    
+        arr.push(values);
+    }
+    showCardFavorite(arr);
+
+}
+
 function dataFavoriteNull(favorit) {
     if (favorit == '') {
         card = '';
@@ -378,7 +407,6 @@ async function getCardFavorite(val) {
         dataFavorite.push(values);
     }
     showCardFavorite(dataFavorite);
-    likeFavoriteAndDel(dataFavorite);
 }
 
 function showCardFavorite(val) {
@@ -398,7 +426,7 @@ function foodInfo(val) {
                     </div>
                     <div class="headerTitle">
                         <h1 class="img">${val.title}</h1>
-                        <p>${val.origin}</p>
+                        <p>Jawa Timur</p>
                     </div>
                 </div>
                 <div class="Detailfood">
@@ -473,6 +501,12 @@ function error() {
     <img  src="https://cdn.discordapp.com/attachments/764062693124341760/859859375694151700/3024051-removebg-preview.png" alt="">
     <h3>Maaf data tidak ditemukan (:</h3>
     </div>`;
+}
+
+function ahah(a) {
+    const ahha = document.querySelector('.haha');
+    // ahha.innerText = `${}`;
+    console.log(a);
 }
 
 function showTitle(val)
