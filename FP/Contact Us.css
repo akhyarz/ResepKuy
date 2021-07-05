@@ -19,7 +19,10 @@ body{
     display: block;
     overflow: visible;
     height: auto;
-    min-height: 800px;
+    min-height: 850px;
+}
+.section{
+    width:100%;
 }
 .h1-contact{
     padding-top: 50px;
@@ -114,10 +117,6 @@ body{
 .comment:hover{
     border-color:whitesmoke;
 }
-.btn-send:hover, .btn-send:active{
-    background: rgb(83,73,237);
-    color: whitesmoke;
-}
 .sosmed{
     background: rgb(190,190,190);
     background: linear-gradient(0deg, rgba(190,190,190,0.6530987394957983) 100%, rgba(232,231,255,1) 100%);
@@ -130,15 +129,12 @@ body{
     font-weight: bolder;
     cursor: pointer;
 }
-.h6-contact:hover{
+.h5-contact:hover{
     color: #5349ed;
 }
 
 .contact{
-    margin-bottom: 100px;
-}
-.h5-contact{
-    padding-bottom: 20px;
+    margin-bottom: 130px;
 }
 .h2-contact span{
     margin-top: 50px;
@@ -184,7 +180,7 @@ body{
     .sosmed {
         display: table;
         table-layout: fixed;
-        width: 100%;
+        width: 107%;
         height: 100%;
     }
     .csosmed{
@@ -196,9 +192,13 @@ body{
     {
         display: table-row;
     }
-    /* h5, h4 {
-        height: 100%;
-        margin-top: 0;
-        margin-bottom: 0;
-    } */
+    .contact{
+        margin-left: 20px
+    }
+    .name{
+        width: 43%;
+    }
+    .email{
+        width: 43%;
+    }
 }

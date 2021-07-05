@@ -299,7 +299,8 @@ button i {
 }
 .info p {
     font-weight: 300;
-    text-align: left;
+    text-align: justify;
+    text-indent: 15px;
     line-height: .6cm;
 }
 .info{

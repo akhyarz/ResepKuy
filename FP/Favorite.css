@@ -32,10 +32,11 @@ body{
 .menu-btn span{
     font-size: 28px;
     line-height: 45px;
+
 }
 
 .menu-btn.click span:before{
-    content: '\f00d';
+    content: '\f09c';
 }
 
 .sidebar{
@@ -236,8 +237,9 @@ button i {
     padding-bottom: 30px;
 }
 .info p {
+    text-align: justify;
     font-weight: 300;
-    text-align: left;
+    text-indent: 15px;
     line-height: .6cm;
 }
 .info{

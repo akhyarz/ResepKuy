@@ -5,7 +5,6 @@ $('.menu-btn').click(function(){
     $('.mainbar').toggleClass('show');
 });
 
-
 const mainInfo = document.querySelector('.main-info');
 const wrap = document.querySelector('.wrap');
 const cardInfo = document.querySelector('.container_card');
@@ -198,7 +197,9 @@ function error() {
     <h3>Maaf data tidak ditemukan (:</h3>
     </div>`;
 }
+
 function showTitle(val)
 {
     judul.innerText = `${val.title}`;
 }
+
